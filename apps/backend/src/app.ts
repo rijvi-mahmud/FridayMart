@@ -2,7 +2,7 @@ import express, { type Express } from 'express'
 import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
-import { appLogger, testLogger } from 'services/loggerServices';
+import { appLogger } from 'services/loggerServices';
 
 dotenv.config();
 
@@ -17,9 +17,15 @@ app.use(morgan('dev'));
 
 app.get('/', (_req, res) => {
     appLogger.info('Hello World from express server. it\'s Friday!');
-    testLogger.info('Hello World from express server. it\'s Friday! and it\'s a test!');
     res.status(200).json({
         message: 'Hello World from express server. it\'s Friday!'
+    })
+})
+
+
+app.use('/health',(_req, res) => {
+    res.status(200).json({
+        message: 'OK'
     })
 })
 

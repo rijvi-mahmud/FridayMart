@@ -1,6 +1,0 @@
-{
-  message: "Hello World from express server. it's Friday! and it's a test!",
-  level: 'info',
-  service: 'test',
-  timestamp: '2024-10-09T07:41:56.468Z'
-}

@@ -40,7 +40,7 @@
 
 import winston from "winston";
 
-const { combine, timestamp, json, prettyPrint, errors, colorize } = winston.format;
+const { combine, timestamp, json, prettyPrint, errors, colorize, cli } = winston.format;
 
 enum LogLevel {
     Emerg = "emerg",
@@ -64,7 +64,8 @@ class ServiceLogger {
                 timestamp(),
                 json(),
                 prettyPrint(),
-                colorize()
+                colorize(),
+                cli()
             ),
             transports: [
                 new winston.transports.Console({ level: logLevel }),

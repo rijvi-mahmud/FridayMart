@@ -10,3 +10,10 @@
   service: 'app',
   timestamp: '2024-10-09T07:41:56.455Z'
 }
+{
+  message: "Hello World from express server. it's Friday!",
+  level: 'info',
+  service: 'app',
+  timestamp: '2024-10-10T10:16:37.197Z'
+}
+[32m[32minfo[32m[39m:    Hello World from express server. it's Friday!
