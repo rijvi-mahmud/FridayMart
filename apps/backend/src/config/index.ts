@@ -1,2 +1,2 @@
 export {default as ENV} from './env';
-export {prisma, dbConnect, disconnect} from './prisma';
+export {prisma, dbConnect, dbDisconnect as disconnect} from './prisma';

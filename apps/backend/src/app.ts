@@ -19,11 +19,11 @@ app.use(morgan('dev'));
 
 app.get('/', (_req, res) => {
     appLogger.info('Hello World from express server. it\'s Friday!');
-    // res.status(200).json({
-    //     message: 'Hello World from express server. it\'s Friday!'
-    // })
+    res.status(200).json({
+        message: 'Hello World from express server. it\'s Friday!'
+    })
 
-    ErrorLogger.createBadRequestError("bad request error", 400)
+    // ErrorLogger.createBadRequestError("bad request error", 400)
 })
 
 
